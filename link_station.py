@@ -8,7 +8,7 @@ def get_power(point, link_station):
 # TODO
 def get_best_link_station(point, link_stations):
     """Get best link station (with most power) for given point (x,y)"""
-    return str("TODO get_best_link_station for point" + point)
+    return "TODO get_best_link_station for point" + str(point)
 
 
 def main():
@@ -29,7 +29,7 @@ def main():
     # calculate best link stations and print the results
     # TODO consider making calculations concurrent
     for point in points:
-        print("Best link station for point" + point + " is " + \
+        print("Best link station for point" + str(point) + " is " + \
         get_best_link_station(point, link_stations))
 
     print("DONE")
