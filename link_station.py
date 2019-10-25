@@ -11,10 +11,18 @@ def get_power(point, link_station):
     distance = get_distance(point, (link_station[0], link_station[1]))
     return (link_station[2]-distance)**2 if distance < link_station[2] else 0
 
-# TODO
 def get_best_link_station(point, link_stations):
     """Get best link station (with most power) for given point (x,y)"""
-    return "TODO get_best_link_station for point" + str(point)
+    best_station = ()
+    for station in link_stations:
+        if not best_station or get_power(point, station) > get_power(point, best_station):
+            best_station = station
+            best_link_power = get_power(point, best_station)
+    if best_link_power:
+        return "Best link station for point " + str(point[0]) + "," + str(point[1]) + \
+            " is " + str(best_station[0]) + "," + str(best_station[1]) + \
+            " with power " + str(best_link_power)
+    return "No link station within reach for point " + str(point[0]) + "," + str(point[1])    
 
 def main():
     """Run program for exercise data"""
@@ -34,8 +42,7 @@ def main():
     # calculate best link stations and print the results
     # TODO consider making calculations concurrent
     for point in points:
-        print("Best link station for point" + str(point) + " is " + \
-        get_best_link_station(point, link_stations))
+        print(get_best_link_station(point, link_stations))
 
     print("DONE")
 
