@@ -148,7 +148,7 @@ def run_for_default_data():
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     """
-    Execute program on as Azure Function.
+    Execute program as Azure Function.
     """
     logging.info("BestLinkStation HTTP triggered.")
     return func.HttpResponse(run_for_default_data())
