@@ -1,8 +1,8 @@
 """This module calculates best link station (with most power) for a device at given point (x,y)"""
 
-import azure.functions as func
 import logging
 import math
+import azure.functions as func
 
 class Point:
     """
@@ -143,8 +143,8 @@ def run_for_default_data():
     # calculate best link stations and get the results
     for device in devices:
         results += device.get_best_link_station_with_power(link_stations)
-    
-    return results 
+
+    return results
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     """

@@ -1,5 +1,5 @@
 {
-  "scriptFile": "__init__.py",
+  "scriptFile": "link_station.py",
   "bindings": [
     {
       "authLevel": "function",
