@@ -11,11 +11,11 @@ if distance > reach, power = 0
 ```
 
 Program should output following line:
-```javascript
+```
 “Best link station for point x,y is x,y with power z”
 ```
 or:
-```javascript
+```
 “No link station within reach for point x,y”
 ```
 
@@ -29,10 +29,11 @@ Print out function output from points (x, y):
 
 ## Solution
 ### Access program deployed on Azure Functions
-Request access writing to <maciek.wiraszka@gmail.com>
+Request access by writing to <maciek.wiraszka@gmail.com>
 ### Run locally
 Requires Python 3.6+ (tested on Python 3.6.8)
-
 1. `$ pip install -r requirements.txt`
 2. `$ python linkstation/link_station.py`
-    
+### Run tests
+Requires Python 3.6+ (tested on Python 3.6.8)
+1. `$ python -m unittest -v`
